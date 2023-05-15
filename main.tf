@@ -6,6 +6,7 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "4.52.0"
+      region = "ap-southeast-2"
     }
     random = {
       source  = "hashicorp/random"
@@ -13,10 +14,6 @@ terraform {
     }
   }
   required_version = ">= 1.1.0"
-}
-
-provider "aws" {
-  version = "4.52.0"
 }
 resource "random_pet" "sg" {}
 
