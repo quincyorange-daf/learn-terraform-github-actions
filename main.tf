@@ -16,10 +16,7 @@ terraform {
 }
 
 provider "aws" {
-   source = "hashicorp/aws"
-         version = "= 3.74.2"
 }
-
 resource "random_pet" "sg" {}
 
 data "aws_ami" "ubuntu" {
