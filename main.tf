@@ -16,6 +16,7 @@ terraform {
 }
 
 provider "aws" {
+  version = "4.52.0"
 }
 resource "random_pet" "sg" {}
 
