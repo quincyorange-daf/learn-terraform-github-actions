@@ -10,7 +10,17 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "ap-southeast-2"
+}
+
+terraform {
+  cloud {
+    organization = "q-test"
+
+    workspaces {
+      name = "Demo-github-actions"
+    }
+  }
 }
 
 resource "aws_instance" "app_server" {
